@@ -1,7 +1,7 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-import './hornedbeast.css';
 import HornsData from './../HornsData.json';
+import { Row } from "react-bootstrap";
 
 
 // let array = [{
@@ -29,25 +29,21 @@ import HornsData from './../HornsData.json';
 // }]
 class Main extends React.Component {
     render() {
-        return (
-            
+        return ( 
             <>
                 <div>
+<Row>
             {
                 HornsData.map((item,idx) => {
                     return(
-
                         <HornedBeast
                         key={idx}
                             title={item.title}
                             img={item.image_url}
-                            description={item.description}
-    
+                            description={item.description}    
                         />
-                    )
-
-                })
-            }
+                    )}) }
+                        </Row>
 
                     {/* <HornedBeast title="UniWhal"
                         img="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg" description="" />
