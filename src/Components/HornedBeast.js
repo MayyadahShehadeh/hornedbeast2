@@ -1,6 +1,6 @@
 import React from "react";
-import { Card,Button,Row,Col } from "react-bootstrap";
-// import './../App.css';
+import { Card, Button, Col, Modal } from "react-bootstrap";
+
 
 class HornedBeast extends React.Component {
 
@@ -8,7 +8,8 @@ class HornedBeast extends React.Component {
         super(props);
 
         this.state = {
-            numOfClick: 0
+            numOfClick: 0,
+            show: false
         }
     }
     increaseOne = () => {
@@ -18,53 +19,56 @@ class HornedBeast extends React.Component {
         })
     }
 
+    handleShow = () => {
 
+        this.setState({
+            show: true
+        })
+    }
 
+    handleClose = () => {
+
+        this.setState({
+            show: false
+        })
+    }
 
 
     render() {
         return (
-
-
             <>
-            {/* <Card style={{ width: '18rem', margin:'20px'}}>
-            <Card.Img variant="top" src={this.props.img} style={{width:'18rem' , height:'200px'}} />
-            <Card.Body>
-              <Card.Title>{this.props.title}</Card.Title>
-            
-              <Card.Text>
-              ❤️{this.state.numOfClick}
-              </Card.Text>
-              <Card.Text>
-              {this.props.description}
-              </Card.Text>
-              <Button variant="primary"onClick={this.increaseOne}> vote</Button>
-            </Card.Body>
-          </Card> */}
-            
-      
+
+                <Modal show={this.state.show} onHide={this.handleClose} >
+                    <Modal.Header closeButton>
+                        <Modal.Title>{this.props.title}</Modal.Title>
+                    </Modal.Header>
+                    <Card.Img variant="top" src={this.props.img} />
+                    <Modal.Body>{this.props.description}</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={this.handleClose}> Close</Button>
+                    </Modal.Footer>
+                </Modal>
 
 
-      <Col>
-          <Card style={{ width: '15rem', margin:'5px'}}>
-            <Card.Img variant="top" src={this.props.img} />
-            <Card.Body>
-              <Card.Title>{this.props.title}</Card.Title>
-              <Card.Text>
-              ❤️{this.state.numOfClick} Favorite
-              </Card.Text>
-              <Card.Text>
-              {this.props.description}
-              </Card.Text>
-              <Button variant="primary"onClick={this.increaseOne}> vote</Button>
+                <Col>
+                    <Card style={{ width: '15rem', margin: '5px' }}>
+                        <Card.Img variant="top" src={this.props.img} />
+                        <Card.Body>
+                            <Card.Title>{this.props.title}</Card.Title>
+                            <Card.Text>
+                                ❤️{this.state.numOfClick} Favorite
+                            </Card.Text>
+                            <Card.Text>
+                                {this.props.description}
+                            </Card.Text>
+                            <Button variant="primary" onClick={this.increaseOne}> vote</Button>
+                            <Button variant="primary" onClick={this.handleShow}>
+                                show
+                            </Button>
+                        </Card.Body>
+                    </Card>
 
-            </Card.Body>
-          </Card>
-        
-          </Col>
-
- 
-
+                </Col>
 
                 {/* <img src= />
                 <h2> </h2>
