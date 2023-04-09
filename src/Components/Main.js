@@ -36,7 +36,7 @@ class Main extends React.Component {
 
                         onChange={(e) => this.choosenNumOfHorns(e)} >
 
-                        <option value="" selected disabled hidden>Select Number Of Horns</option>
+                        <option defaultValue=""  disabled hidden>Select Number Of Horns</option>
                         <option value="0">All</option>
                         <option value="1">1</option>
                         <option value="2">2</option>

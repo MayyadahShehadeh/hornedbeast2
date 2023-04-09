@@ -6,7 +6,7 @@ class Footer extends React.Component {
 
             <>
 
-                <p class="text-center" style={{backgroundColor: 'beige',padding: ' 2%'}}>
+                <p className="text-center" style={{backgroundColor: 'beige',padding: ' 2%'}}>
                     &copy; Mayadah </p>
             </>
         )
