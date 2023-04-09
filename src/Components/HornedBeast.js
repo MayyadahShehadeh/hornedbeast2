@@ -12,9 +12,9 @@ class HornedBeast extends React.Component {
         this.state = {
             numOfClick: 0,
             show: false
+         
         }
     }
-
 
     increaseOne = () => {
         this.setState({
@@ -24,26 +24,21 @@ class HornedBeast extends React.Component {
     }
 
     handleShow = () => {
-
         this.setState({
             show: true
+
         })
     }
-
+    
     handleClose = () => {
-
         this.setState({
             show: false
         })
-    }
-
-
+}
+    
     render() {
         return (
             <>
-
-
-
 
                 <CardHornedBeast 
                 numOfClick = {this.state.numOfClick}
