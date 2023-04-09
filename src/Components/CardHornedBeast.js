@@ -9,8 +9,8 @@ class CardHornedBeast extends React.Component {
 
             <>
                 <Col>
-                    <Card style={{ width: '15rem', margin: '5px' }}>
-                        <Card.Img variant="top" src={this.props.img} />
+                    <Card style={{ width: '15rem', margin: '4px' }} onClick= {this.props.handleShow}>
+                        <Card.Img variant="top" src={this.props.img} onClick={this.props.increaseOne}  />
                         <Card.Body>
                             <Card.Title>{this.props.title}</Card.Title>
                             <Card.Text>
