@@ -44,6 +44,7 @@ class HornedBeast extends React.Component {
                 numOfClick = {this.state.numOfClick}
                 increaseOne = {this.increaseOne}
                 handleShow = {this.handleShow}
+
                 title={this.props.title}
                 img={this.props.img}
                 description={this.props.description}
@@ -54,6 +55,7 @@ class HornedBeast extends React.Component {
                 <ModalHornedBeast
                     handleShow={this.state.show}
                     handleClose={this.handleClose}
+                    
                     title={this.props.title}
                     img={this.props.img}
                     description={this.props.description}

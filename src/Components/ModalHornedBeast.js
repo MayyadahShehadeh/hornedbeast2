@@ -21,7 +21,6 @@ class ModalHornedBeast extends React.Component {
 
             </>
 
-
         )
     }
 }
